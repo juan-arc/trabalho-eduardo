@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Weather App</string>
+    <string name="city_hint">Digite a cidade (ex: Passos,MG,BR)</string>
+    <string name="days_label">Dias de previsão:</string>
+    <string name="search_button">Buscar Previsão</string>
+    <string name="error_empty_city">Por favor, digite o nome da cidade</string>
+    <string name="error_network">Erro de rede. Verifique sua conexão.</string>
+    <string name="error_api">Erro ao buscar dados da API</string>
+    <string name="loading">Carregando...</string>
+    <string name="temperature">Temp: %1$s°C - %2$s°C</string>
+    <string name="humidity">Umidade: %1$d%%</string>
+</resources>
