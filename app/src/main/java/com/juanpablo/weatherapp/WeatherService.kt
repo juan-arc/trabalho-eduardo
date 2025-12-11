@@ -96,7 +96,7 @@ class WeatherService {
         val jsonObject = JsonParser.parseString(jsonString).asJsonObject
 
         val city = jsonObject.get("city")?.asString ?: ""
-        val forecastArray = jsonObject.getAsJsonArray("forecast")
+        val forecastArray = jsonObject.getAsJsonArray("days")
 
         val weatherList = mutableListOf<WeatherData>()
 
@@ -105,8 +105,8 @@ class WeatherService {
 
             val weatherData = WeatherData(
                 date = forecastObj.get("date")?.asString ?: "",
-                minTemp = forecastObj.get("min_temp")?.asDouble ?: 0.0,
-                maxTemp = forecastObj.get("max_temp")?.asDouble ?: 0.0,
+                minTemp = forecastObj.get("minTempC")?.asDouble ?: 0.0,
+                maxTemp = forecastObj.get("maxTempC")?.asDouble ?: 0.0,
                 humidity = forecastObj.get("humidity")?.asDouble ?: 0.0,
                 description = forecastObj.get("description")?.asString ?: "",
                 icon = forecastObj.get("icon")?.asString ?: ""
